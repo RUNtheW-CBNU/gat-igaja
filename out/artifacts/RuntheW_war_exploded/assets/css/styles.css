@@ -498,6 +498,7 @@ input {
 /*=============== EXPERIENCE ===============*/
 
 .experience__container {
+  text-align: center;
   row-gap: 2.5rem;
   justify-content: center;
   justify-items: center;
@@ -516,7 +517,7 @@ input {
   margin-bottom: var(--mb-0-5);
 }
 
-.experience__description {
+.description {
   font-size: var(--small-font-size);
 }
 
@@ -576,7 +577,7 @@ input {
 /*=============== PLACES ===============*/
 
 .place__card,
-.place__img {
+.g {
   height: 230px;
 }
 
@@ -615,43 +616,11 @@ input {
   padding: 0.75rem 0.75rem 1rem;
 }
 
-.place__rating {
-  align-self: flex-end;
-  display: flex;
-  align-items: center;
-}
-
-.place__rating-icon {
-  font-size: 0.75rem;
-  margin-right: var(--mb-0-25);
-}
-
-.place__rating-number {
-  font-size: var(--small-font-size);
-}
-
-.place__subtitle,
-.place__price {
-  /* span tag */
-  display: block;
-}
-
 .place__title {
+  margin-top: 7.5em;
   font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-25);
 }
 
-.place__subtitle {
-  font-size: var(--smaller-font-size);
-  margin-bottom: var(--mb-1-25);
-}
-
-.place__button {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem 1rem;
-}
 
 /*=============== SUBSCRIBE ===============*/
 .subscribe__bg {
@@ -1084,7 +1053,7 @@ input {
   }
   .home__data-title {
     font-size: 2rem;
-    margin-bottom: var(--mb);
+    /*margin-bottom: var(--mb);*/
   }
   .home__info {
     bottom: 1rem;
