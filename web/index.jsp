@@ -26,8 +26,9 @@
   <title>Travel</title>
 </head>
 <body>
-//header
+
 <jsp:include page="header.jsp"></jsp:include>
+
 
 <main class="main">
   <!--==================== HOME ====================-->
@@ -187,3 +188,7 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9b43fc17fef72c194aae3f51e43211eb7c0364e8

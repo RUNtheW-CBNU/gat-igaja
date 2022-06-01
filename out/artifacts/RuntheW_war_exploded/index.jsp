@@ -26,6 +26,7 @@
   <title>Travel</title>
 </head>
 <body>
+
 //header
 <jsp:include page="header.jsp"></jsp:include>
 
@@ -158,6 +159,7 @@
 
 <jsp:include page="footer.jsp"></jsp:include>
 
+
 <!--=============== SCROLL UP ===============-->
 <a href="#" class="scrollup" id="scroll-up">
   <i class="ri-arrow-up-line scrollup__icon"></i>
@@ -187,3 +189,7 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9b43fc17fef72c194aae3f51e43211eb7c0364e8
