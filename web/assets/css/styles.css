@@ -308,8 +308,17 @@ input {
   object-fit: cover;
   object-position: 83%;
 }
+.each_home__img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center 10%;
+}
 
-.home__container {
+.home__container, .each_home__container {
   position: relative;
   height: calc(100vh - var(--header-height));
   align-content: center;
@@ -498,6 +507,7 @@ input {
 /*=============== EXPERIENCE ===============*/
 
 .experience__container {
+  text-align: center;
   row-gap: 2.5rem;
   justify-content: center;
   justify-items: center;
@@ -516,7 +526,7 @@ input {
   margin-bottom: var(--mb-0-5);
 }
 
-.experience__description {
+.description {
   font-size: var(--small-font-size);
 }
 
@@ -576,7 +586,7 @@ input {
 /*=============== PLACES ===============*/
 
 .place__card,
-.place__img {
+.g {
   height: 230px;
 }
 
@@ -615,43 +625,11 @@ input {
   padding: 0.75rem 0.75rem 1rem;
 }
 
-.place__rating {
-  align-self: flex-end;
-  display: flex;
-  align-items: center;
-}
-
-.place__rating-icon {
-  font-size: 0.75rem;
-  margin-right: var(--mb-0-25);
-}
-
-.place__rating-number {
-  font-size: var(--small-font-size);
-}
-
-.place__subtitle,
-.place__price {
-  /* span tag */
-  display: block;
-}
-
 .place__title {
+  margin-top: 7.5em;
   font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-25);
 }
 
-.place__subtitle {
-  font-size: var(--smaller-font-size);
-  margin-bottom: var(--mb-1-25);
-}
-
-.place__button {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem 1rem;
-}
 
 /*=============== SUBSCRIBE ===============*/
 .subscribe__bg {
@@ -778,7 +756,7 @@ input {
 .scrollup {
   position: fixed;
   right: 1rem;
-  bottom: -20%;
+  bottom: 2%;
   background-color: var(--first-color);
   padding: 0.5rem;
   border-radius: 5px;
@@ -828,9 +806,11 @@ input {
   }
   .experience__overlay:nth-child(1) {
     width: 190px;
+    position: absolute;
   }
   .experience__overlay:nth-child(2) {
     width: 80px;
+    position: absolute;
   }
   .home__info {
     width: 190px;
@@ -1084,7 +1064,7 @@ input {
   }
   .home__data-title {
     font-size: 2rem;
-    margin-bottom: var(--mb);
+    /*margin-bottom: var(--mb);*/
   }
   .home__info {
     bottom: 1rem;
@@ -1094,5 +1074,12 @@ input {
   .home__container,
   .home__img {
     height: 800px;
+  }
+}
+/*국가별 배너*/
+@media screen and (min-height: 721px) {
+  .each_home__container,
+  .each_home__img {
+    height: 400px;
   }
 }

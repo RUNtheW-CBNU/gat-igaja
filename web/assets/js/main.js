@@ -1,7 +1,7 @@
 /*==================== SHOW MENU ====================*/
 const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close')
 
 /*===== MENU SHOW =====*/
 if(navToggle){
@@ -12,9 +12,9 @@ if(navToggle){
 
 /*===== MENU HIDDEN =====*/
 if(navClose){
-  navClose.addEventListener('click', () =>{
-      navMenu.classList.remove('show-menu')
-  })
+    navClose.addEventListener('click', () =>{
+        navMenu.classList.remove('show-menu')
+    })
 }
 
 /*===== REMOVE MENU MOBILE =====*/
@@ -28,51 +28,51 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== CHANGE BACKGROUND HEADER. 스크롤 할 때 어느순간 navbar 배경이 흰색으로 변경 ====================*/
 function scrollHeader(){
-  const header = document.getElementById('header')
-  // When the scroll is greater than 100 viewport height, add the scroll-header class to the header tag
-  if(this.scrollY >= 100){ 
-    header.classList.add('scroll-header');
-   } else { 
-     header.classList.remove('scroll-header')
-   }
+    const header = document.getElementById('header')
+    // When the scroll is greater than 100 viewport height, add the scroll-header class to the header tag
+    if(this.scrollY >= 100){
+        header.classList.add('scroll-header');
+    } else {
+        header.classList.remove('scroll-header')
+    }
 }
 window.addEventListener('scroll', scrollHeader)
 
 /*==================== SWIPER DISCOVER ====================*/
 
 var swiper = new Swiper(".discover__container", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  loop: true,
-  spaceBetween: 32,
-  coverflowEffect: {
-    rotate: 0
-  }
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 32,
+    coverflowEffect: {
+        rotate: 0
+    }
 });
 
 /*==================== VIDEO ====================*/
 const videoFile = document.getElementById('video-file'),
-      videoButton = document.getElementById('video-button'),
-      videoIcon = document.getElementById('video-icon')
+    videoButton = document.getElementById('video-button'),
+    videoIcon = document.getElementById('video-icon')
 
-function playPause(){ 
-  if (videoFile.paused){
-      // Play video
-      videoFile.play()
-      // We change the icon
-      videoIcon.classList.add('ri-pause-line')
-      videoIcon.classList.remove('ri-play-line')
-  }
-  else {
-      // Pause video
-      videoFile.pause(); 
-      // We change the icon
-      videoIcon.classList.remove('ri-pause-line')
-      videoIcon.classList.add('ri-play-line')
+function playPause(){
+    if (videoFile.paused){
+        // Play video
+        videoFile.play()
+        // We change the icon
+        videoIcon.classList.add('ri-pause-line')
+        videoIcon.classList.remove('ri-play-line')
+    }
+    else {
+        // Pause video
+        videoFile.pause();
+        // We change the icon
+        videoIcon.classList.remove('ri-pause-line')
+        videoIcon.classList.add('ri-play-line')
 
-  }
+    }
 }
 
 videoButton.addEventListener('click', playPause)
@@ -85,15 +85,15 @@ function finalVideo(){
 // ended, when the video ends
 videoFile.addEventListener('ended', finalVideo)
 
-/*==================== SHOW SCROLL UP ====================*/ 
+/*==================== SHOW SCROLL UP ====================*/
 function scrollUp(){
-  const scrollUp = document.getElementById('scroll-up');
-  // When the scroll is higher than 200 viewport height, add the show-scroll class to the a tag with the scroll-top class
-  if(this.scrollY >= 200){
-    scrollUp.classList.add('show-scroll');
-  } else{ 
-    scrollUp.classList.remove('show-scroll')
-  }
+    const scrollUp = document.getElementById('scroll-up');
+    // When the scroll is higher than 200 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if(this.scrollY >= 200){
+        scrollUp.classList.add('show-scroll');
+    } else{
+        scrollUp.classList.remove('show-scroll')
+    }
 }
 window.addEventListener('scroll', scrollUp)
 
@@ -117,7 +117,7 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
-/*==================== DARK LIGHT THEME ====================*/ 
+/*==================== DARK LIGHT THEME ====================*/
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
@@ -132,9 +132,9 @@ const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moo
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+    // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
 }
 
 // Activate / deactivate the theme manually with the button
@@ -149,9 +149,9 @@ themeButton.addEventListener('click', () => {
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
 const sr = ScrollReveal({
-  distance: '60px',
-  duration: 2500,
-  // reset: true,
+    distance: '60px',
+    duration: 2500,
+    // reset: true,
 })
 
 
@@ -162,20 +162,48 @@ sr.reveal(`.home__data, .home__social-link, .home__info,
          .place__card,
          .sponsor__content,
          .footer__data, .footer__rights`,{
-  origin: 'top',
-  // interval: 100,
+    origin: 'top',
+    // interval: 100,
 })
 
 sr.reveal(`.about__data,
          .video__description,
          .subscribe__description`,{
-  origin: 'left',
-  interval: 100,
+    origin: 'left',
+    interval: 100,
 })
 
 sr.reveal(`.about__img-overlay, 
          .video__content,
          .subscribe__form`,{
-  origin: 'right',
-  interval: 100,
+    origin: 'right',
+    interval: 100,
 })
+
+//지도 이미지 띄우기
+function doImgPop(img){
+    img1= new Image();
+    img1.src=(img);
+    imgControll(img);
+}
+
+function imgControll(img){
+    if((img1.width!=0)&&(img1.height!=0)){
+        viewImage(img);
+    }
+    else{
+        controller="imgControll('"+img+"')";
+        intervalID=setTimeout(controller,20);
+    }
+}
+
+function viewImage(img){
+    W=img1.width;
+    H=img1.height;
+    O="width="+W+",height="+H+",scrollbars=yes";
+    imgWin=window.open("","",O);
+    imgWin.document.write("<html><head><title>:*:*:*: 이미지상세보기 :*:*:*:*:*:*:</title></head>");
+    imgWin.document.write("<body topmargin='0'  leftmargin='0'>");
+    imgWin.document.write("<img src="+img+" onclick='self.close()' style='cursor:pointer;' title ='클릭하시면 창이 닫힙니다.'>");
+    imgWin.document.close();
+}
