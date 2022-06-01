@@ -26,46 +26,9 @@
   <title>Travel</title>
 </head>
 <body>
-<header class="header" id="header">
-  <nav class="nav container">
-    <a href="#" class="nav__logo">Gat-i Gaja</a>
 
-    <div class="nav__menu" id="nav-menu">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="#uk" class="nav__link">UK</a>
-        </li>
-        <li class="nav__item">
-          <a href="#france" class="nav__link">France</a>
-        </li>
-        <li class="nav__item">
-          <a href="#arab" class="nav__link">Arab</a>
-        </li>
-        <li class="nav__item">
-          <a href="#philippines" class="nav__link">Philippines</a>
-        </li>
-        <li class="nav__item">
-          <a href="#australia" class="nav__link">Australia</a>
-        </li>
-        <li class="nav__item">
-          <a href="#usa" class="nav__link">USA</a>
-        </li>
-      </ul>
+<jsp:include page="header.jsp"></jsp:include>
 
-      <div class="nav__dark">
-        <!-- Theme change button -->
-        <span class="change-theme-name">Dark mode</span>
-        <i class="ri-moon-line change-theme" id="theme-button"></i>
-      </div>
-
-      <i class="ri-close-line nav__close" id="nav-close"></i>
-    </div>
-
-    <div class="nav__toggle" id="nav-toggle">
-      <i class="ri-function-line"></i>
-    </div>
-  </nav>
-</header>
 
 <main class="main">
   <!--==================== HOME ====================-->
@@ -84,7 +47,7 @@
   <section class="about section" id="about">
     <div class="about__container container grid">
       <div class="about__data">
-        <h2 class="section__title about__title">Gati Gaja </h2>
+        <h2 class="section__title about__title">Gat-i Gaja </h2>
         <p class="about__description">"Gat-i Gaja, 같이 가자"는 COVID-19 입국 제한이 풀린 나라들의 여행 정보를 정리한 사이트입니다.
           입국이 가능한 많은 국가 중 영국, 프랑스, 아랍, 필리핀, 호주, 미국에 대한 정보를 제공합니다.
         </p>
@@ -129,8 +92,8 @@
 
 
   <!--==================== PLACES ====================-->
-<%--  글자 위치 글자 색 수정 필요--%>
-<%--  하이퍼 링크 추가하기--%>
+  <%--  글자 위치 글자 색 수정 필요--%>
+  <%--  하이퍼 링크 추가하기--%>
 
   <section class="place section" id="place">
     <h2 class="section__title">Choose Your Place</h2>
@@ -194,52 +157,7 @@
   </section>
 </main>
 
-<!--=============== FOOTER ===============-->
-<footer class="footer section">
-  <div class="footer__container container grid">
-    <div class="footer__content grid">
-      <div class="footer__data">
-        <h3 class="footer__title">Gat-i Gaja</h3>
-        <p class="footer__description">청춘은 여행이다.<br>
-          찢어진 주머니에 두 손을 내리꽂은 채<br> 그저 길을 떠나도 좋은 것이다.</p>
-      </div>
-      <div class="footer__data">
-        <h3 class="footer__subtitle">Place</h3>
-        <div style="margin-right:50px; float:left">
-          <ul>
-            <li class="footer__item">
-              <a href="#" class="footer__link">UK</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">France</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Arab</a>
-            </li>
-          </ul>
-        </div>
-        <div style="float:right">
-          <ul>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Philippines</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Australia</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">USA</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer__rights">
-      <p class="footer__copy">RuntheW</p>
-    </div>
-  </div>
-
-</footer>
+<jsp:include page="footer.jsp"></jsp:include>
 
 <!--=============== SCROLL UP ===============-->
 <a href="#" class="scrollup" id="scroll-up">
@@ -270,4 +188,7 @@
 
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 9b43fc17fef72c194aae3f51e43211eb7c0364e8
