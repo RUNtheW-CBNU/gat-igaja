@@ -21,9 +21,12 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/each_style.css">
+    <link rel="stylesheet" href="assets/css/map.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/Weather.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"/>
     <title>France</title>
 </head>
 <body>
@@ -124,8 +127,7 @@
                 </ul>
             </div>
             <div class="info_img" style="width: 40%; float: right;">
-                <img src="assets/img/france_map.png" alt="" class="experience__img-one" width="295px" height="295px" title="클릭하시면 원본크기로 보실 수 있습니다."
-                     style="cursor: pointer;" onclick="doImgPop('assets/img/france_map.png')" />
+                <div id="map"></div>
             </div>
         </div>
     </section>
@@ -197,8 +199,16 @@
                 <canvas class="line_chart" id="line-chart" ></canvas>
             </div>
             <div class="info_img" style="width: 40%; float: right;">
-                <!-- 날씨 api 임의로 사진 넣어둠 -->
-                <img src="assets/img/weather_api.PNG" class="experience__img-one" >
+                <!-- 날씨 api container에 받아옴 -->
+                <div class="container">
+                    <div class = "card">
+                        <h2><i>&#x2708 </i> <span id="location"></span></h2>
+                        <h5 id="weather"></h5>
+                        <h4><span id="temp"></span><sup>o</sup>C</h4>
+                        <img src ="" id ="icon">
+                        <!--<button onclick="window.location.reload();" class="refresh"><i>&#x2708</i></button>-->
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -239,6 +249,8 @@
 <script src="assets/js/main.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <script src="assets/js/country.js"></script>
-
+<script src="assets/js/map.js"></script>
+<script src="assets/js/Weather.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWNwND17k49S529e1b23yG20JexwvWPKs&callback=initMap&v=weekly" defer></script>
 </body>
 </html>
