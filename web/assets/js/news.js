@@ -16,7 +16,8 @@ const newsdetails = document.getElementById("newsdetails");
 var newsDataArr = [];
 
 // apis
-const API_KEY = "883d54484a2143d799c3a67298504be5";
+//const API_KEY = "883d54484a2143d799c3a67298504be5";   //진희 key
+const API_KEY = "4e8539f9ef644031ae08b775b7a41887";     //민정 key
 const HEADLINES_NEWS = "https://newsapi.org/v2/top-headlines?country=fr&apiKey=";
 const GENERAL_NEWS = "https://newsapi.org/v2/top-headlines?country=fr&category=general&apiKey=";
 const BUSINESS_NEWS = "https://newsapi.org/v2/top-headlines?country=fr&category=business&apiKey=";
